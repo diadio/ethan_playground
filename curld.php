@@ -36,7 +36,7 @@ class curld{
         return $this->contents;
     }
 }
-$url = '127.0.0.1';
+$url = 'www.google.com';
 $ch = curl_init();
 $data = array('name' => 'Foo', 'file' => '@/home/user/test.png');
 //$this->curld($ch, $url); //先爬首页 让cookie等参数抓取
