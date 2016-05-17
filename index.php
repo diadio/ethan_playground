@@ -1,3 +1,7 @@
+<html>
+<head>
+<title> HELLO LINE BOT  </title>
+</head>
 <?php
    if($_GET['ctlr'] =='linebot')
    {
@@ -5,3 +9,4 @@
         $ctrlObj = new getpostCtrl();
    }
 ?>
+</html>
