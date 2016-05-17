@@ -1,6 +1,4 @@
 <?php
-echo 'HELLO';die();
-error_reporting(E_ALL);
 
 /* Allow the script to hang around waiting for connections. */
 set_time_limit(0);
