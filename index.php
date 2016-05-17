@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> HELLO LINE BOT  </title>
+<title>--HELLO LINE BOT--</title>
 </head>
 <?php
    if($_GET['ctlr'] =='linebot')
