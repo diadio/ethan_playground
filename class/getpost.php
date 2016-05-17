@@ -7,7 +7,7 @@ class getpostCtrl{
         $this->data = var_export($_REQUEST);
 
         file_put_contents($this->file, $this->data, $this->mode);
-        echo file_get_contents('./files.txt');
+        echo file_get_contents($this->filename);
     }
     public function getContent(){
         return $this->contents;
