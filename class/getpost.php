@@ -6,9 +6,9 @@ class getpostCtrl{
         $this->mode = FILE_APPEND;
         $this->data = var_export($_REQUEST);
 
-        file_put_contents($this->file, $this->data, $this->mode);
+        echo file_put_contents($this->file, $this->data, $this->mode);
         echo file_get_contents($this->filename);
-        echo 55;
+        echo 56;
     }
     public function getContent(){
         return $this->contents;
