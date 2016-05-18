@@ -15,7 +15,12 @@ class getpostCtrl{
     }
     public function rmContent(){
         unlink ($this->filename);
-         echo "<div>THE END -REMOVED</div>";
+        echo "<div>THE END -REMOVED</div>";
+        return true;
+    }
+    public function showContent(){
+        echo file_get_contents($this->filename);
+        echo "<div>THE END -SHOWING</div>";
         return true;
     }
 }

@@ -11,8 +11,9 @@
         if($_GET['act'] == 'rm')
         {
         	$ctrlObj->rmContent();
-        }else{
-        	
+        }elseif($_GET['act'] == 'show'){
+          $ctrlObj->showContent();
+        }else{	
         	$ctrlObj->saveContent();
         }
    }
