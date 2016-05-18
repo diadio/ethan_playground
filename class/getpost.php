@@ -10,7 +10,6 @@ class getpostCtrl{
     }
     public function saveContent(){
         file_put_contents($this->filename, $this->data, $this->mode);
-
         echo file_get_contents($this->filename);
         echo "<div>THE END -SAVED</div>";
         return true;
