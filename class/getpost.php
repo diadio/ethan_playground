@@ -11,11 +11,10 @@ class getpostCtrl{
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
     }
-    
     public function saveContent(){
         $form = $this->data->result[0]->content->from;
         $msg = $this->data->result[0]->content->text;
-        $data = '{from_id:"'$form.'", msg:"'.$msg.'", time:"'.time().'"}'.PHP_EOL;
+        $data = '{from_id:"'$form.'", msg:"'.$msg.'"}'.PHP_EOL;
 
         file_put_contents($this->filename, $data, $this->mode);
         echo file_get_contents($this->filename);
