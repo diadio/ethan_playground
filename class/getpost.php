@@ -4,7 +4,7 @@ class getpostCtrl{
     function __construct(){
         $this->filename = 'files.txt';
         $this->mode = FILE_APPEND;
-        $this->data = var_export($_REQUEST, ture).var_export(getallheaders(), ture);
+        $this->data = var_export($_REQUEST, ture);
 
     }
     public function saveContent(){
