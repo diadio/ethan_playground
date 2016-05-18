@@ -6,7 +6,8 @@ class getpostCtrl{
         $this->mode = FILE_APPEND;
         $this->data = var_export($_REQUEST, ture);
         $this->data .= var_export($_SERVER, ture);
-        $this->data .= var_export($_FILES, true);
+        $this->data .= file_get_contents('php://input');
+
     }
     public function saveContent(){
         file_put_contents($this->filename, $this->data, $this->mode);
