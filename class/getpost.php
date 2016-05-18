@@ -6,11 +6,16 @@ class getpostCtrl{
         $this->mode = FILE_APPEND;
         $this->data = var_export($_REQUEST, ture);
 
+    }
+    public function saveContent(){
         file_put_contents($this->filename, $this->data, $this->mode);
         echo file_get_contents($this->filename);
-        echo "<div>THE END</div>";
+        echo "<div>THE END -SAVED</div>";
+        return true;
     }
-    public function getContent(){
-        return $this->contents;
+    public function rmContent(){
+        unlink ($this->filename);
+         echo "<div>THE END -REMOVED</div>";
+        return true;
     }
 }
