@@ -11,6 +11,7 @@ class getpostCtrl{
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
     }
+    
     public function saveContent(){
         $form = $this->data->result[0]->content->from;
         $msg = $this->data->result[0]->content->text;
