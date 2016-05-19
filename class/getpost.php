@@ -7,6 +7,7 @@ class getpostCtrl{
         $this->data = json_decode(file_get_contents('php://input'));
         if(!$this->data)
             return 'error';
+        echo 2;
         //$this->data .= var_export($_REQUEST, ture);
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
@@ -14,6 +15,7 @@ class getpostCtrl{
         {
             $this->rmContent();
         }elseif($_GET['act'] == 'show'){
+            echo 3;
             $this->showContent();
         }else{  
             $this->saveContent();
