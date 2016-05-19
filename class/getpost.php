@@ -6,9 +6,10 @@ class getpostCtrl{
         $this->filename = 'files.txt';
         $this->mode = FILE_APPEND;
         $this->data = json_decode(file_get_contents('php://input'));
-        if(!$this->data)
-            return 'error';
         echo "-";
+        if(!$this->data)
+            die('error');
+        
         //$this->data .= var_export($_REQUEST, ture);
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
