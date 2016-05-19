@@ -9,7 +9,6 @@
         include './class/getpost.php';
 
         $ctrlObj = new getpostCtrl();
-
    }
 ?>
 </html>

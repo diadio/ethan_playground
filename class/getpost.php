@@ -2,12 +2,13 @@
 
 class getpostCtrl{
     function __construct(){
+        echo 2;
         $this->filename = 'files.txt';
         $this->mode = FILE_APPEND;
         $this->data = json_decode(file_get_contents('php://input'));
         if(!$this->data)
             return 'error';
-        echo 2;
+        echo "-";
         //$this->data .= var_export($_REQUEST, ture);
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
