@@ -5,11 +5,7 @@ class getpostCtrl{
         echo 2;
         $this->filename = 'files.txt';
         $this->mode = FILE_APPEND;
-        $this->data = json_decode(file_get_contents('php://input'));
-        echo "-";
-        if(!$this->data)
-            die('error');
-        
+
         //$this->data .= var_export($_REQUEST, ture);
         //$this->data .= var_export($_SERVER, ture);
         //$this->data .= file_get_contents('php://input');
@@ -19,7 +15,10 @@ class getpostCtrl{
         }elseif($_GET['act'] == 'show'){
             echo 3;
             $this->showContent();
-        }else{  
+        }else{
+            $this->data = json_decode(file_get_contents('php://input'));
+            if(!$this->data)
+                die('error');
             $this->saveContent();
         }
     }
