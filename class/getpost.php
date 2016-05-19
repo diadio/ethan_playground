@@ -39,7 +39,7 @@ class getpostCtrl{
         echo "<div>THE END -SHOWING</div>";
         return true;
     }
-    public function sendDataLToLine($id, $msg){
+    private function sendDataLToLine($id, $msg){
         $url = 'https://trialbot-api.line.me/v1/events';
         $ch = curl_init();
         $headers = array( 
