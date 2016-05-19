@@ -2,7 +2,6 @@
 
 class getpostCtrl{
     function __construct(){
-        echo 2;
         $this->filename = 'files.txt';
         $this->mode = FILE_APPEND;
 
@@ -13,7 +12,6 @@ class getpostCtrl{
         {
             $this->rmContent();
         }elseif($_GET['act'] == 'show'){
-            echo 3;
             $this->showContent();
         }else{
             $this->data = json_decode(file_get_contents('php://input'));
