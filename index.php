@@ -5,17 +5,8 @@
 <?php
    if($_GET['ctrl'] =='linebot')
    {
+        include './class/curld.php';
         include './class/getpost.php';
-        $ctrlObj = new getpostCtrl();
-
-        if($_GET['act'] == 'rm')
-        {
-        	$ctrlObj->rmContent();
-        }elseif($_GET['act'] == 'show'){
-          $ctrlObj->showContent();
-        }else{	
-        	$ctrlObj->saveContent();
-        }
    }
 ?>
 </html>
