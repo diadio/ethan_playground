@@ -50,8 +50,8 @@ class getpostCtrl{
             "X-Line-Trusted-User-With-ACL: u4e1165732698f7880f324a13efe95655"
         );
 
-        $data = array('to' => array('u5912407b444e54885d00111f7b0ce375'), 'toChannel' => 1383378250, 'eventType'=>'138311608800106203','content'=>
-            array('contentType'=>1, 'toType'=>1, 'text'=>'Hello,Jose!')
+        $data = array('to' => array($id), 'toChannel' => 1383378250, 'eventType'=>'138311608800106203','content'=>
+            array('contentType'=>1, 'toType'=>1, 'text'=>$msg)
         );
 
         var_dump(json_encode($data));
