@@ -23,7 +23,7 @@ class getpostCtrl{
         $form = $this->data->result[0]->content->from;
         $msg = $this->data->result[0]->content->text;
         $data_arr = array("form_id"=>$form, "msg"=>$msg, "time"=>time());
-        $data = json_encode($data_arr).PHP_EOL;
+        $data = json_encode($data_arr).PHP_EOL; 
         file_put_contents($this->filename, $data, $this->mode);
         echo file_get_contents($this->filename);
         echo "<div>THE END -SAVED</div>";
@@ -46,7 +46,7 @@ class getpostCtrl{
             "Content-Type: application/json; charser=UTF-8",
             "User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36",
             "X-Line-ChannelID: 1467309815",
-            "X-Line-ChannelSecret: 4e09f7b1c211ff953ce14efc772f508e", 
+            "X-Line-ChannelSecret: ", 
             "X-Line-Trusted-User-With-ACL: u4e1165732698f7880f324a13efe95655"
             
         );
