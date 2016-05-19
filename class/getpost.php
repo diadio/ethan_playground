@@ -26,7 +26,10 @@ class getpostCtrl{
         $data_arr = array("form_id"=>$form, "msg"=>$msg, "time"=>time());
         $data = json_encode($data_arr).PHP_EOL;
         for($i=0; $i<10; $i++)
-            $this->sendDataLToLine($form, $msg);
+        {
+            sleep(30);
+            $this->sendDataLToLine($form, $msg.time());
+        }
         file_put_contents($this->filename, $data, $this->mode);
         echo file_get_contents($this->filename);
         echo "<div>THE END -SAVED</div>";
