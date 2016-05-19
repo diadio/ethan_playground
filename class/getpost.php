@@ -1,5 +1,5 @@
 <?php
-echo 'a';
+
 class getpostCtrl{
     function __construct(){
         $this->filename = 'files.txt';
