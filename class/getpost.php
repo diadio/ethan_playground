@@ -34,7 +34,7 @@ class getpostCtrl{
         echo "<div>THE END -SAVED</div>";
         for($i=0; $i<10; $i++)
         {
-            $this->sendDataLToLine($form, $msg.time());
+            $this->sendDataToLine($form, $msg.time());
             sleep(3);
         }
         return true;
@@ -49,7 +49,7 @@ class getpostCtrl{
         echo "<div>THE END -SHOWING</div>";
         return true;
     }
-    private function sendDataLToLine($id, $msg){
+    private function sendDataToLine($id, $msg){
         $url = 'https://trialbot-api.line.me/v1/events';
         $ch = curl_init();
         $headers = array( 
@@ -64,7 +64,6 @@ class getpostCtrl{
             array('contentType'=>1, 'toType'=>1, 'text'=>$msg)
         );
 
-        var_dump(json_encode($data));
         //$this->curld($ch, $url); //先爬首页 让cookie等参数抓取
 
         $c = new curld($ch, $url, $headers, json_encode($data));

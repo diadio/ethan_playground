@@ -10,7 +10,9 @@
 <?php
    if($_GET['ctrl'] =='linebot')
    {
+        //model
         include './class/curld.php';
+        //controller
         include './class/getpost.php';
 
         $ctrlObj = new getpostCtrl();
