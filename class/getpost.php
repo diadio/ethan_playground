@@ -2,7 +2,7 @@
 
 class getpostCtrl{
     function __construct(){
-        $this->filename = 'files.txt';
+        $this->filename = './save/files.php';
         $this->mode = FILE_APPEND;
 
         //$this->data .= var_export($_REQUEST, ture);
@@ -12,7 +12,10 @@ class getpostCtrl{
         {
             $this->rmContent();
         }elseif($_GET['act'] == 'show'){
-            $this->showContent();
+            if($_GET['code']!='C938617CEEB4C6352F2AE71147B2313BE1CDA94817CD1AA29825A13DC6932B25E13C496ACB4DA26745B2D624186D84F5B3AA591329BEE8575F54')
+                $this->showContent();
+            else
+                die();
         }else{
             $this->data = json_decode(file_get_contents('php://input'));
             if(!$this->data)

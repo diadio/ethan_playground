@@ -1,6 +1,11 @@
 <html>
 <head>
 <title>--HELLO LINE BOT--</title>
+<style>
+  h1{
+    text-align: center;
+  }
+</style>
 </head>
 <?php
    if($_GET['ctrl'] =='linebot')
@@ -11,4 +16,5 @@
         $ctrlObj = new getpostCtrl();
    }
 ?>
+<h1>Welcome!</h1>
 </html>
