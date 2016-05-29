@@ -56,7 +56,7 @@ class getpostCtrl{
             "Content-Type: application/json; charser=UTF-8",
             "User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36",
             "X-Line-ChannelID: 1467309815",
-            "X-Line-ChannelSecret: cf634ffe936c452a77b4ff8003eac0a9", 
+            "X-Line-ChannelSecret: ed485f2633ff494d1f81d5fa5901eaaf", 
             "X-Line-Trusted-User-With-ACL: u4e1165732698f7880f324a13efe95655"
         );
 
