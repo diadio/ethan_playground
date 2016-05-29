@@ -1,8 +1,8 @@
 <?php
 
 class autoSendCtrl{
-    include './class/curld.php';
     function __construct(){
+        include './class/curld.php';
         $this->filename = './save/files.php';
         $this->mode = FILE_APPEND;
 
